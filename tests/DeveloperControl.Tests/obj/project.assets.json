@@ -393,6 +393,29 @@
         "build": {
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "DeveloperControl.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "DeveloperControl.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DeveloperControl.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeveloperControl.Application.dll": {}
+        }
+      },
+      "DeveloperControl.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/DeveloperControl.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeveloperControl.Domain.dll": {}
+        }
       }
     }
   },
@@ -903,10 +926,22 @@
         "xunit.runner.visualstudio.3.1.4.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "DeveloperControl.Application/1.0.0": {
+      "type": "project",
+      "path": "../../src/DeveloperControl.Application/DeveloperControl.Application.csproj",
+      "msbuildProject": "../../src/DeveloperControl.Application/DeveloperControl.Application.csproj"
+    },
+    "DeveloperControl.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../src/DeveloperControl.Domain/DeveloperControl.Domain.csproj",
+      "msbuildProject": "../../src/DeveloperControl.Domain/DeveloperControl.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "DeveloperControl.Application >= 1.0.0",
+      "DeveloperControl.Domain >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
@@ -946,7 +981,14 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\DeveloperControl\\src\\DeveloperControl.Application\\DeveloperControl.Application.csproj": {
+              "projectPath": "C:\\Projects\\DeveloperControl\\src\\DeveloperControl.Application\\DeveloperControl.Application.csproj"
+            },
+            "C:\\Projects\\DeveloperControl\\src\\DeveloperControl.Domain\\DeveloperControl.Domain.csproj": {
+              "projectPath": "C:\\Projects\\DeveloperControl\\src\\DeveloperControl.Domain\\DeveloperControl.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -999,7 +1041,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -1,11 +1,30 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "DeveloperControl.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/DeveloperControl.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DeveloperControl.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DeveloperControl.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DeveloperControl.Domain/DeveloperControl.Domain.csproj",
+      "msbuildProject": "../DeveloperControl.Domain/DeveloperControl.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "DeveloperControl.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\guize\\.nuget\\packages\\": {},
@@ -40,7 +59,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\DeveloperControl\\src\\DeveloperControl.Domain\\DeveloperControl.Domain.csproj": {
+              "projectPath": "C:\\Projects\\DeveloperControl\\src\\DeveloperControl.Domain\\DeveloperControl.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -75,7 +98,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
